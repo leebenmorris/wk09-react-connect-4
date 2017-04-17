@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+  background-color: blue;
+  border-spacing: 10px;
+}
+
+td {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+
+.counter {
+  display: inline-block;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+
+.currText {
+  vertical-align: middle;
+}
+
+.selectCounter:hover {
+  cursor: pointer;
+}
+
+.reset {
+  display: table-cell;
+  padding: 0px 10px 0px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: gray;
+  align-self: center;
+}
+
+.reset:hover {
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.white {
+  background-color: white;
+}
+
+h1 {
+  font-family: Calibri;
+}
+
+.heading {
+  text-align: center;
+  color: blue;
+}
+
+.winners {
+    text-align: center;
+}
