@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -7,7 +8,9 @@ module.exports = {
     path: path.resolve(__dirname, 'docs', 'js'),
     publicPath: '/'
   },
-  devtool: 'eval-source-map',
+  // use the follwoing for production
+  devtool: 'cheap-module-source-map',
+  // devtool: 'eval-source-map',
   module: {
     rules: [
       {
@@ -29,6 +32,14 @@ module.exports = {
       }
     ]
   },
+  // use the following plugin for production
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ],
   devServer: {
     contentBase: path.resolve(__dirname, 'docs'),
     publicPath: '/js/',
